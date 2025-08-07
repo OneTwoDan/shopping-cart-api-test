@@ -21,29 +21,12 @@ export default function Home() {
     fetchProducts()
   }, [])
 
-  const handleAddToCart = async (productId: number) => {
-    try {
-      await fetch("/api/cart", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ productId }),
-      })
-      alert("Product added to cart.")
-    } catch (error) {
-      console.error("Failed to add to cart:", error)
-    }
-  }
-
   return (
     <main className="max-w-7xl mx-auto px-6 py-10">
       <h1 className="text-2xl font-bold mb-6">Our Products</h1>
       <div className="flex flex-wrap gap-6">
         {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            onAddToCart={handleAddToCart}
-          />
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </main>
