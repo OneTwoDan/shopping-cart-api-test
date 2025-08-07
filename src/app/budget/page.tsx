@@ -37,7 +37,7 @@ export default function Budget() {
   const total = bestCombination.reduce((sum, p) => sum + p.price, 0)
 
   return (
-    <main className="max-w-3xl mx-auto px-4 py-10">
+    <main className="max-w-3xl mx-auto px-4 py-10 mt-20">
       <h1 className="text-3xl font-bold mb-6">Budget Optimizer</h1>
 
       <div className="flex items-center gap-4 mb-6">
