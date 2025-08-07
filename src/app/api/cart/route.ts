@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import { addToCart, getCart } from "@/lib/cart"
+import { addToCart, getCart, clearCart } from "@/lib/cart"
 
 export async function GET() {
   const cart = getCart()
@@ -16,4 +16,9 @@ export async function POST(request: NextRequest) {
 
   addToCart(productId)
   return NextResponse.json({ message: "Product added to cart" })
+}
+
+export async function DELETE() {
+  clearCart()
+  return NextResponse.json({ message: "Cart cleared" })
 }

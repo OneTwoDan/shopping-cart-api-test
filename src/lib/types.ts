@@ -4,3 +4,8 @@ export interface Product {
   price: number
   image: string
 }
+
+export type CartItem = {
+  product: Product
+  quantity: number
+}
