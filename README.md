@@ -2,6 +2,9 @@
 
 API y frontend en Next.js para listar productos, agregar al carrito y calcular la mejor combinación de productos según un presupuesto.
 
+## Demo en Vivo
+[Ver aplicación desplegada](https://shopping-cart-api-test.vercel.app/)
+
 ## Tecnologías
 
 - Next.js (frontend y backend)
